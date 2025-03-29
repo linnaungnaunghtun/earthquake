@@ -104,6 +104,9 @@ function ViewPage() {
 
   return (
     <>
+    <div className="bg-death p-3 text-white">
+        <marquee className="text-sm">ငလျင်းဘေးအန္တရာယ် မှ  ကင်းဝေးကြပါစေလို့ MMQuakeSupport.net မှ ဆုတောင်းပေးလိုက်ပါတယ်  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;   ငလျင်းဘေးအန္တရာယ် မှ  ကင်းဝေးကြပါစေလို့ MMQuakeSupport.net မှ ဆုတောင်းပေးလိုက်ပါတယ်</marquee>
+    </div>
       <New />
       <div className="bg-black">
         <main className=" mx-auto px-4 py-8 sm:px-6 lg:px-8">
@@ -124,7 +127,7 @@ function ViewPage() {
                         {/* location and time */}
                         <div className="flex items-start md:items-center justify-between mb-5 md:mb-0">
                           <div className="gap-2 w-[600px]">
-                            <h3 className="text-sm font-medium text-white">
+                            <h3 className="text-xl mb-2 font-medium text-white">
                               {area.division}
                             </h3>
                             <h3 className="text-sm font-medium text-white">
@@ -140,7 +143,7 @@ function ViewPage() {
                         </div>
 
                         <div>
-                          <div className="flex items-center justify-center h-[50px] bg-red-600 text-white rounded-xl px-5 ">
+                          <div className="flex items-center justify-center h-[50px] bg-death text-white rounded-xl px-5 ">
                             <div className="flex items-center">
                             <CiLocationOn />
                             <a
