@@ -105,7 +105,7 @@ function ViewPage() {
   return (
     <>
     <div className="bg-death p-3 text-white">
-        <marquee className="text-sm">ငလျင်းဘေးအန္တရာယ် မှ  ကင်းဝေးကြပါစေလို့ MMQuakeSupport.net မှ ဆုတောင်းပေးလိုက်ပါတယ်  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;   ငလျင်းဘေးအန္တရာယ် မှ  ကင်းဝေးကြပါစေလို့ MMQuakeSupport.net မှ ဆုတောင်းပေးလိုက်ပါတယ်</marquee>
+        <marquee className="text-sm">ငလျင်းဘေးအန္တရာယ် မှ  ကင်းဝေးကြပါစေလို့ Myanmar Quake Support Team မှ ဆုတောင်းပေးလိုက်ပါတယ်  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;   ငလျင်းဘေးအန္တရာယ် မှ  ကင်းဝေးကြပါစေလို့ MMQuakeSupport.net မှ ဆုတောင်းပေးလိုက်ပါတယ်</marquee>
     </div>
       <New />
       <div className="bg-black">

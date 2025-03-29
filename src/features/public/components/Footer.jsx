@@ -6,7 +6,7 @@ const Footer = () => {
       
       <div className="mt-10">
       <hr></hr>
-          <h5 className="text-white text-center pt-3">Help & Myanmar QuakeSupport.net</h5>
+          <h5 className="text-white text-center pt-3">Help & Myanmar Quake Support Team</h5>
       </div>
     </footer>
   );
