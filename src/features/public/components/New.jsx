@@ -52,7 +52,7 @@ export default function New() {
               type="text" readOnly
               value={time.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit' })}
               placeholder="DD/MM/YY"
-              className="bg-zinc-800 border border-zinc-700 rounded px-4 py-2 md:w-48 w-44 text-center"
+              className="bg-zinc-800 border border-zinc-700 rounded px-4 py-2 md:w-48 w-36 text-center"
             />
           </div>
           <div className="flex flex-col">
@@ -61,7 +61,7 @@ export default function New() {
              value={time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit',  hour12: true }).replace(/am/i, 'AM').replace(/pm/i, 'PM')}
               type="text" readOnly
               placeholder="7:00 AM"
-              className="bg-zinc-800 border border-zinc-700 rounded px-4 py-2 md:w-48 w-44 text-center"
+              className="bg-zinc-800 border border-zinc-700 rounded px-4 py-2 md:w-48 w-36 text-center"
             />
           </div>
         </div>
