@@ -108,18 +108,17 @@ function ViewPage() {
       <div className="bg-black">
         <main className=" mx-auto px-4 py-8 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
-            <div className="lg:col-span-2">
-              <div className="bg-home text-white rounded-lg shadow">
-                <div className="px-1 py-5 border-b border-gray-200 sm:px-3">
-                  <h2 className="text-2xl font-bold text-white">
+          <h2 className="text-2xl font-bold text-white">
                     ကူညီရန်သွားဖို့လိုအပ်သောနေရာများ
                   </h2>
-                </div>
-                <ul className="max-h-96 overflow-y-auto divide-gray-200 border border-[#5E5E5E] rounded-lg">
+            <div className="lg:col-span-2 border border-[#5E5E5E] rounded-lg">
+              <div className="bg-home text-white rounded-lg shadow">
+                
+                <ul className="max-h-96 overflow-y-auto divide-gray-200  rounded-lg">
                   {info.map((area) => (
                     <li
                       key={area.id}
-                      className="p-4 hover:bg-gray-700  cursor-pointer transition-colors duration-150"
+                      className="p-4 hover:bg-gray-700  border-b border-[#5E5E5E] last:border-b-0 cursor-pointer transition-colors duration-150"
                     >
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         {/* location and time */}

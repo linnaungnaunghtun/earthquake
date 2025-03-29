@@ -45,7 +45,7 @@ export default function New() {
         </div>
   
         {/* Date and Time Inputs */}
-        <div className="flex justify-end gap-4 mb-3">
+        <div className="flex md:justify-end gap-4 mb-3">
           <div className="flex flex-col">
             <label className="text-sm mb-2">ရက်စွဲ</label>
             <input
