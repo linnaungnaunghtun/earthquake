@@ -11,6 +11,7 @@ const PublicLayout = () => {
       <Suspense fallback={<PageLoading />}>
         <Outlet />
       </Suspense>
+      <Footer />  
     
     </main>
   );

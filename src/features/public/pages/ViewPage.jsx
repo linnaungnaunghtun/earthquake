@@ -162,8 +162,12 @@ function ViewPage() {
                     </li>
                   ))}
                 </ul>
+                
               </div>
+              
             </div>
+            
+            
             {/* 
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow">
@@ -201,7 +205,9 @@ function ViewPage() {
           </div> */}
           </div>
         </main>
+        
       </div>
+      
     </>
   );
 }
