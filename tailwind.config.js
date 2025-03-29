@@ -26,6 +26,10 @@ export default {
           900: "#593b2a",
           950: "#331f15",
         },
+        death : "#8B0000",
+        injury: "#FFA600",
+        lost: "#1E3A8A",
+        home: '#171717'
       },
     },
   },

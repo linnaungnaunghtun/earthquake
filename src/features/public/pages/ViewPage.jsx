@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FiAlertTriangle } from 'react-icons/fi';
 import { BsActivity } from 'react-icons/bs';
 import { BiGlobe } from 'react-icons/bi';
+import HeroSection from '../components/HeroSection';
+import PeopleSection from '../components/PeopleSection';
 
 
 function ViewPage() {
@@ -63,20 +65,14 @@ function ViewPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <BsActivity className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">EarthquakeWatch</h1>
-          </div>
-          <div className="flex items-center space-x-2">
-            <BiGlobe className="h-5 w-5 text-gray-500" />
-            <span className="text-sm text-gray-600">Live Monitoring</span>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-home text-white">
+     
+      <header className="bg-death text-white p-5">
+      <marquee className="font-bold">ငလျင်းဘေးအန္တရာယ် မှ  ကင်းဝေးကြပါစေလို့ MMQuakeSupport.net မှ ဆုတောင်းပေးလိုက်ပါတယ်။</marquee>
 
+      </header>
+      <HeroSection/>
+      <PeopleSection/>
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
