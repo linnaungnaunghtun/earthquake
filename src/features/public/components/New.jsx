@@ -49,7 +49,7 @@ export default function New() {
           <div className="flex flex-col">
             <label className="text-sm mb-2">ရက်စွဲ</label>
             <input
-              type="text"
+              type="text" readOnly
               value={time.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit' })}
               placeholder="DD/MM/YY"
               className="bg-zinc-800 border border-zinc-700 rounded px-4 py-2 w-48 text-center"
@@ -58,8 +58,8 @@ export default function New() {
           <div className="flex flex-col">
             <label className="text-sm mb-2 ">အချိန်</label>
             <input
-             value={time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: true })}
-              type="text"
+             value={time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit',  hour12: true }).replace(/am/i, 'AM').replace(/pm/i, 'PM')}
+              type="text" readOnly
               placeholder="7:00 AM"
               className="bg-zinc-800 border border-zinc-700 rounded px-4 py-2 w-48 text-center"
             />

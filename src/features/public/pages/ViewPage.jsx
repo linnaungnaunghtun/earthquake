@@ -118,12 +118,12 @@ function ViewPage() {
                   {info.map((area) => (
                     <li
                       key={area.id}
-                      className="p-4 hover:bg-gray-700  border-b border-[#5E5E5E] last:border-b-0 cursor-pointer transition-colors duration-150"
+                      className="p-4   border-b border-[#5E5E5E] last:border-b-0 cursor-pointer "
                     >
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         {/* location and time */}
-                        <div className="flex items-center justify-between mb-5 md:mb-0">
-                          <div className="gap-2 w-80">
+                        <div className="flex items-start md:items-center justify-between mb-5 md:mb-0">
+                          <div className="gap-2 w-[600px]">
                             <h3 className="text-sm font-medium text-white">
                               {area.division}
                             </h3>
@@ -140,7 +140,8 @@ function ViewPage() {
                         </div>
 
                         <div>
-                          <div className="flex items-center justify-center h-[50px] bg-red-600 text-white rounded-xl px-2 py-4">
+                          <div className="flex items-center justify-center h-[50px] bg-red-600 text-white rounded-xl px-5 ">
+                            <div className="flex items-center">
                             <CiLocationOn />
                             <a
                               href={`https://www.google.com/maps/search/?api=1&query=${area.google_map_location}`}
@@ -150,6 +151,7 @@ function ViewPage() {
                             >
                               တည်နေရာကြည့်ရန်
                             </a>
+                            </div>
                           </div>
                         </div>
                         {/* <MapPin className="h-5 w-5 text-gray-400" /> */}
