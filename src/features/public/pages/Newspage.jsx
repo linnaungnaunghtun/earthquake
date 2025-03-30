@@ -138,21 +138,24 @@ const Newspage = () => {
                       key={area.id}
                       className="p-4   border-b border-[#5E5E5E] last:border-b-0 cursor-pointer "
                     >
-                      <div className="flex items-start md:items-start justify-between mb-5 md:mb-0">
+                      <div className=" mb-5 md:mb-0">
                           <div className="gap-2 ">
+                            <div className="flex justify-between items-center">
                             <h3 className="text-xl mb-2 font-medium text-white">
                               {division}
                             </h3>
+                            <div className="">
+                            <p className="text-sm  text-white">
+                              {new Date(area.created_at).toLocaleDateString()}
+                            </p>
+                          </div>
+                            </div>
                             <h3 className="text-sm font-medium text-white">
                                 {area.article}
                             </h3>
                           </div>
 
-                          <div className="">
-                            <p className="text-sm  text-white">
-                              {new Date(area.created_at).toLocaleDateString()}
-                            </p>
-                          </div>
+                          
                         </div>
                     </li>
                   ))}
