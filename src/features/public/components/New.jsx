@@ -88,10 +88,7 @@ total_dead
 missing_person}</div>
           </div>
 
-          <div className="flex flex-col">
-          {/* <h3 className='text-xl  mb-2 font-medium'>သတင်းများကြည့်ရန်</h3> */}
-            <div className="bg-injury rounded-md h-28 flex items-center justify-center text-3xl font-bold">သတင်းများကြည့်ရန်</div>
-          </div>
+          
         </div>
       </div>
     )

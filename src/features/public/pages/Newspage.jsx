@@ -14,10 +14,7 @@ const Newspage = () => {
   const [info, setInfo] = useState([]);
   const [posts, setPosts] = useState([]);
   const {id} = useParams()
-  useEffect(() => {
-    getInformation();
-    getPosts();
-  }, []);
+  
 
   async function getInformation() {
     const { data } = await supabase.from("categories").select();
@@ -35,84 +32,10 @@ const Newspage = () => {
   }
 
   console.log(posts,"posts");
-
-  const [earthquakes, setEarthquakes] = useState([
-    {
-      id: "1",
-      magnitude: 6.2,
-      location: "Off the coast of California",
-      time: "2024-03-15T10:30:00",
-      depth: 10.5,
-    },
-    {
-      id: "2",
-      magnitude: 5.8,
-      location: "Central Japan",
-      time: "2024-03-15T09:15:00",
-      depth: 15.2,
-    },
-    {
-      id: "3",
-      magnitude: 4.5,
-      location: "Southern Alaska",
-      time: "2024-03-15T08:45:00",
-      depth: 8.7,
-    },
-    {
-      id: "4",
-      magnitude: 4.5,
-      location: "Southern Alaska",
-      time: "2024-03-15T08:45:00",
-      depth: 8.7,
-    },
-
-    {
-      id: "5",
-      magnitude: 4.5,
-      location: "Southern Alaska",
-      time: "2024-03-15T08:45:00",
-      depth: 8.7,
-    },
-    {
-      id: "6",
-      magnitude: 4.5,
-      location: "Southern Alaska",
-      time: "2024-03-15T08:45:00",
-      depth: 8.7,
-    },
-  ]);
-
-  const Information = [
-    {
-      id: "1",
-      title: "Magnitude",
-      description: "6.2",
-    },
-    {
-      id: "2",
-      title: "Location",
-      description: "Off the coast of California",
-    },
-    {
-      id: "3",
-      title: "Time",
-      description: "2024-03-15T10:30:00",
-    },
-    {
-      id: "4",
-      title: "Depth",
-      description: "10.5 km",
-    },
-  ];
-
-  const [selectedQuake, setSelectedQuake] = useState(null);
-
-  const getMagnitudeColor = (magnitude) => {
-    if (magnitude >= 7) return "bg-red-500";
-    if (magnitude >= 5) return "bg-orange-500";
-    if (magnitude >= 3) return "bg-yellow-500";
-    return "bg-green-500";
-  };
+  useEffect(() => {
+    getInformation();
+    getPosts();
+  }, [id]);
   return (
 <div className="bg-black">
         <main className=" mx-auto px-4 py-8 sm:px-6 lg:px-8">
@@ -141,11 +64,11 @@ const Newspage = () => {
                       <div className=" mb-5 md:mb-0">
                           <div className="gap-2 ">
                             <div className="flex justify-between items-center">
-                            <h3 className="text-xl mb-2 font-medium text-white">
+                            <h3 className="text-xl mb-2 font-bold text-white">
                               {division}
                             </h3>
                             <div className="">
-                            <p className="text-sm  text-white">
+                            <p className="text-xl font-medium  text-white">
                               {new Date(area.created_at).toLocaleDateString()}
                             </p>
                           </div>
