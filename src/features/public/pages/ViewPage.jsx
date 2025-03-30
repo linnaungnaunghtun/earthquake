@@ -4,6 +4,7 @@ import { BsActivity } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { createClient } from "@supabase/supabase-js";
 import New from "../components/New";
+import { useNavigate } from "react-router-dom";
 
 const supabase = createClient(
   "https://rcicgoflytnsafpbxnwd.supabase.co",
@@ -12,8 +13,11 @@ const supabase = createClient(
 
 function ViewPage() {
   const [info, setInfo] = useState([]);
+  const [news, setNews] = useState(null);
+  const navigate = useNavigate()
   useEffect(() => {
     getInformation();
+    getNews();
   }, []);
 
   async function getInformation() {
@@ -23,7 +27,12 @@ function ViewPage() {
   }
 
   console.log(info);
-
+  async function getNews() {
+    const { data } = await supabase.from("categories").select();
+    setNews(data);
+    console.log(data);
+  }
+console.log(news,"news")
   const [earthquakes, setEarthquakes] = useState([
     {
       id: "1",
@@ -102,6 +111,9 @@ function ViewPage() {
     return "bg-green-500";
   };
 
+  const directToNews = () => {
+    navigate(`/news/${news?.[0]?.id}`);
+  };
   return (
     <>
     <div className="bg-death p-3 text-white">
@@ -116,7 +128,7 @@ function ViewPage() {
           <h2 className="text-2xl font-bold text-white">
                     ကူညီရန်သွားဖို့လိုအပ်သောနေရာများ
                   </h2>
-                  <button className="bg-death py-2 px-5 flex justify-center items-center rounded-lg text-white text-lg mb-3 md:mb-0">သတင်းများကြည့်ရန်</button>
+                  <button onClick={directToNews}  className="bg-death py-2 px-5 flex justify-center items-center rounded-lg text-white text-lg mb-3 md:mb-0">သတင်းများကြည့်ရန်</button>
           </div>
             <div className="lg:col-span-2 border border-[#5E5E5E] rounded-lg">
               <div className="bg-home text-white rounded-lg shadow">
