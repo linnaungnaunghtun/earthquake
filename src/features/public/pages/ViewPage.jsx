@@ -147,7 +147,7 @@ function ViewPage() {
                             <div className="flex items-center">
                             <CiLocationOn />
                             <a
-                              href={`https://www.google.com/maps/search/?api=1&query=${area.google_map_location}`}
+                              href={`${area.google_map_location}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className=""
