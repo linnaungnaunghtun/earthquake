@@ -111,9 +111,13 @@ function ViewPage() {
       <div className="bg-black">
         <main className=" mx-auto px-4 py-8 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
+            {/* title and button for news */}
+          <div className="flex  flex-col-reverse md:flex-row md:justify-between md:items-center">
           <h2 className="text-2xl font-bold text-white">
                     ကူညီရန်သွားဖို့လိုအပ်သောနေရာများ
                   </h2>
+                  <button className="bg-death py-2 px-5 flex justify-center items-center rounded-lg text-white text-lg mb-3 md:mb-0">သတင်းများကြည့်ရန်</button>
+          </div>
             <div className="lg:col-span-2 border border-[#5E5E5E] rounded-lg">
               <div className="bg-home text-white rounded-lg shadow">
                 
